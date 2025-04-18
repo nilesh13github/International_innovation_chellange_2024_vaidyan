@@ -19,3 +19,19 @@ This script fine-tunes the `mistralai/Mistral-7B-Instruct-v0.3` model using the 
 - Fine-tunes the model using the `SFTTrainer` with LoRA for efficient training.
 - Uses mixed precision training (FP16 or BF16) for faster training.
 - Saves the fine-tuned model and tokenizer for later use.
+
+## Key Libraries Used
+
+- `transformers` - For loading and working with Hugging Face models and tokenizers
+- `trl` - For `SFTTrainer`, a wrapper designed for fine-tuning LLMs
+- `peft` - For efficient Parameter-Efficient Fine-Tuning using QLoRA
+- `datasets` - For loading your training data
+- `torch` - PyTorch backend
+
+---
+
+##  Dataset
+
+My own scraped training dataset is a single CSV file:
+```bash
+prompt_data_mistral.csv
